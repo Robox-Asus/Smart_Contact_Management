@@ -1,0 +1,142 @@
+body {
+	background-color: #e2e2e2 !important;
+}
+
+.bg-primary {
+	background: #009688 !important;
+}
+
+.banner {
+	width: 100%;
+	height: 100vh;
+	background-image: linear-gradient(rgba(0, 0, 0, .8), rgba(0, 0, 0, .8)),
+		url(../img/banner.jpg);
+	background-size: cover;
+	color: white;
+}
+
+.my-card {
+	padding: 30px;
+	background-color: #FFFFFF;
+}
+
+.background-radial-gradient {
+      background-color: hsl(218, 41%, 15%);
+      background-image: radial-gradient(650px circle at 0% 0%,
+          hsl(218, 41%, 35%) 15%,
+          hsl(218, 41%, 30%) 35%,
+          hsl(218, 41%, 20%) 75%,
+          hsl(218, 41%, 19%) 80%,
+          transparent 100%),
+        radial-gradient(1250px circle at 100% 100%,
+          hsl(218, 41%, 45%) 15%,
+          hsl(218, 41%, 30%) 35%,
+          hsl(218, 41%, 20%) 75%,
+          hsl(218, 41%, 19%) 80%,
+          transparent 100%);
+    }
+
+    #radius-shape-1 {
+      height: 220px;
+      width: 220px;
+      top: -60px;
+      left: -130px;
+      background: radial-gradient(#44006b, #ad1fff);
+      overflow: hidden;
+    }
+
+    #radius-shape-2 {
+      border-radius: 38% 62% 63% 37% / 70% 33% 67% 30%;
+      bottom: -60px;
+      right: -110px;
+      width: 300px;
+      height: 300px;
+      background: radial-gradient(#44006b, #ad1fff);
+      overflow: hidden;
+    }
+
+    .bg-glass {
+      background-color: hsla(0, 0%, 100%, 0.9) !important;
+      backdrop-filter: saturate(200%) blur(25px);
+    }
+    
+/* sidebar style */
+
+@media only screen and (max-width: 600px){
+  .sidebar{
+    display: none;
+    width:80% !important;
+    background: white;
+    height: 100vh;
+    position: fixed;
+    padding-top: 20px;
+  }
+  .content{
+    margin-left: 0% !important;
+  }
+}
+
+.sidebar{
+  width: 18%;
+  background: white;
+  height:100%;
+  position: fixed;
+  padding-top: 45px; 
+  z-index: 99999999999999999999999;
+}
+.sidebar a{
+  display: block;
+  width:100%;
+  padding: 10px 25px;
+  color: gray;
+  text-decoration: none;
+}
+.sidebar a:hover{
+  background: #e2e2e2;
+  /* font-size: 20px; */
+   text-decoration: none; 
+}
+.sidebar .divider{
+  height: .5px;
+  width: 100%;
+  background: #e2e2e2;
+  margin-top: 10px;
+}
+.content{
+  margin-left: 20%;
+}
+.sidebar .crossBtn{
+  position: absolute;
+  top: 0%;
+  cursor: pointer;
+  right: 35px;
+  font-size: 36px;
+}
+.pointer{
+  cursor: pointer;
+}
+
+.my_profile_picture{
+  width: 30px;
+  height:30px;
+  object-fit:cover;
+  border-radius: 50%;
+  border:2px solid black;
+}
+/* search css*/
+.search-container{
+  position: relative;
+}
+.search-result{
+  position: absolute;
+  background: white;
+  border: 1px solid gray;
+  width:100%;
+  padding: 10px;
+  display: none;
+}    
+
+.outward {
+	margin-top:5% !important;
+} 
+
