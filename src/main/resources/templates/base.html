@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+	th:fragment="layout(content)">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title th:text="${title}">Base HTML</title>
+
+<!-- Bootstrap CSS -->
+<link
+	href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css"
+	rel="stylesheet" />
+	
+	<link rel="stylesheet" th:href="@{/css/style.css}" />
+
+</head>
+<body>
+	<!-- 	Navbar Start -->
+
+	<nav
+		class="navbar navbar-expand-lg navbar-dark bg-primary shadow bg-body-tertiary">
+		<div class="container-fluid">
+
+			<a class="navbar-brand" th:href="@{/home}"> Smart Contact Manager
+			</a>
+
+			<button class="navbar-toggler" type="button"
+				data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+				aria-controls="navbarSupportedContent" aria-expanded="false"
+				aria-label="Toggle navigation">
+				<span class="navbar-toggler-icon"></span>
+			</button>
+
+			<div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+				<ul class="navbar-nav ms-auto mb-2 mb-lg-0 text-uppercase">
+
+					<li class="nav-item"><a class="nav-link active"
+						aria-current="page" th:href="@{/home}">Home</a></li>
+
+					<li class="nav-item"><a class="nav-link" th:href="@{/about}">About</a></li>
+
+					<li class="nav-item"><a class="nav-link" href="#"
+						tabindex="-1" aria-disabled="true" th:href="@{/signin}">Login</a></li>
+
+					<li class="nav-item"><a class="nav-link" th:href="@{/signup}"
+						tabindex="-1" aria-disabled="true">SingUp</a></li>
+
+				</ul>
+
+			</div>
+		</div>
+	</nav>
+	<!-- Navbar End -->
+	
+	 <div th:replace="${content}"></div>
+
+	<script
+		src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+	<script
+		src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"></script>
+	<script
+		src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.min.js"></script>
+	<script th:src="@{/js/script.js}"></script>
+</body>
+</html>

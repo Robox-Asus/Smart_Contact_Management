@@ -1,5 +1,7 @@
 package com.managment.entities;
 
+import com.fasterxml.jackson.annotation.JsonIgnore;
+
 import jakarta.persistence.Column;
 import jakarta.persistence.Entity;
 import jakarta.persistence.GeneratedValue;
@@ -9,7 +11,7 @@ import jakarta.persistence.ManyToOne;
 import jakarta.persistence.Table;
 
 @Entity
-@Table(name = "Contact_details")
+@Table(name = "contact_details")
 public class Contact {
 	@Id
 	@GeneratedValue(strategy = GenerationType.AUTO)
@@ -24,6 +26,7 @@ public class Contact {
 	private String phone;
 
 	@ManyToOne
+	@JsonIgnore
 	private User user;
 
 	public Contact() {
@@ -113,11 +116,4 @@ public class Contact {
 	public void setUser(User user) {
 		this.user = user;
 	}
-
-	@Override
-	public String toString() {
-		return "Contact [cId=" + cId + ", name=" + name + ", nickName=" + nickName + ", work=" + work + ", email="
-				+ email + ", image=" + image + ", description=" + description + ", phone=" + phone + "]";
-	}
-
 }
