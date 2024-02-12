@@ -1,2 +1,2 @@
 # Smart_Contact_Management
- This project is about Smart Contact Management using Spring Boot
+ This project is about Smart Contact Management using Spring Boot and Thyme Leaf
